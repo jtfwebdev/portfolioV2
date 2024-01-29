@@ -1,0 +1,123 @@
+.projectPreview_container {
+    transition-duration: .3s;
+    border-radius: 30px;
+    padding: 10px 0;
+    padding-top: 15px;
+}
+
+.projectPreview_container:hover {
+    transition-duration: .3s;
+    background-color: #7a9e9f26;
+    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.099);
+    cursor: pointer;
+}
+
+.projectPreview_container:not(.projectPreview_container:last-of-type) {
+    margin-bottom: 10vh;
+}
+
+.projectPreview_header {
+    width: 95%;
+    margin: 0 auto;
+    height: 200px;
+    background-position: top center;
+    border-radius: 30px;
+}
+
+.projectPreview_textContainer {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.projectPreview_container h3 {
+    color: #CED0CE;
+    margin: 5px auto;
+    text-align: right;
+    font-size: 2rem;
+}
+
+.projectPreview_container p {
+    position: absolute;
+    color: #CED0CE;
+    top: 0;
+    right: 0;
+    text-align: right;
+    font-size: 1rem;
+    margin-top: 5px;
+}
+
+.devIcon-container {
+    color: white;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.devIcon-container i {
+    font-size: 40px;
+    color: #CED0CE;
+    transition-duration: .2s;
+}
+
+.devIcon-container i:not(.devIcon-container i:last-of-type) {
+    margin-right: 10px;
+}
+
+.projectPreview_container:hover .devIcon-container i {
+    color: #F15025;
+}
+
+.mob-projectPreview_container {
+    width: 100%;
+    height: 30vh;
+    margin-bottom: 5vh;
+    display: flex;
+}
+
+.mob-projectPreview_header {
+    width: 250px;
+    height: 156px;
+    background-position: top center;
+    border-radius: 5px;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.mob-projectPreview_text {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 30px;
+    padding-top: 0;
+}
+
+.mob-projectPreview_text h3 {
+    color: #CED0CE;
+    font-size: 1.5rem;
+}   
+
+.mob-projectPreview_text p {
+    margin-top: 10px;
+    color: #CED0CE;
+    font-size: 1rem;
+}
+
+.mob-devIcon-container {
+    margin-top: 30px;
+    color: #F15025;
+    font-size: 2rem;
+}
+
+.mob-devIcon-container i:not(.mob-devIcon-container i:last-of-type) {
+    margin-right: 15px;
+}
+
+@media (max-width: 770px) {
+    .mob-projectPreview_header {
+        width: 170px;
+        height: 106px;
+    }
+}

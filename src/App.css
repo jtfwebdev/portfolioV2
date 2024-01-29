@@ -1,0 +1,35 @@
+#root {
+    background-color: rgb(15, 23, 42);
+    padding: 0 10vw;
+    position: relative;
+    display: flex;
+    z-index: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.divider {
+    width: 80%;
+    margin: 10% auto;
+    height: 2px;
+    border-radius: 999;
+    background-color: #F15025;
+}
+
+@media (max-width: 1024px) {
+    #root {
+        padding: 10vh 6vw;
+        padding-bottom: 0;
+    }
+    .container {
+        flex-direction: column;
+    }
+    .divider {
+        display: none;
+    }
+}

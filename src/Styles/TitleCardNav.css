@@ -1,0 +1,45 @@
+#nav_fullscreen {
+    margin-top: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden;
+}
+
+#nav_fullscreen div {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+}
+
+#nav_fullscreen div:not(#nav_fullscreen div:last-of-type) {
+    margin-bottom: 10px;
+}
+
+#nav_fullscreen a {
+    color: #F15025;
+    text-decoration: none;
+    width: fit-content;
+    transition-duration: .3s;
+}
+
+#nav_fullscreen a:hover {
+    cursor: pointer;
+}
+
+.navLink {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.navLink.active {
+    font-size: 2rem;
+}
+
+.navLink div {
+    flex: 1;
+    border: 1px solid #F15025;
+    margin: auto 0;
+}

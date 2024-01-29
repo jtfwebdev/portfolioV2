@@ -1,0 +1,19 @@
+#sidebar {
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 50%;
+    flex-shrink: none;
+    justify-content: center;
+    padding-right: 3vw;
+}
+
+@media (max-width: 1024px) {
+    #sidebar {
+        position: relative;
+        height: auto;
+        width: auto;
+    }
+}

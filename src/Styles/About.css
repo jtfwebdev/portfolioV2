@@ -1,0 +1,32 @@
+#about_container {
+    padding-top: 20vh;
+    color: #CED0CE;
+    background: none;
+}
+
+#about_container p {
+    font-family: 'Raleway', sans-serif;
+    background: none;
+}
+
+#about_container p:not(#about_container p:last-of-type) {
+    margin-bottom: 20px;
+}
+
+#about_container h2 {
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(4px);
+    margin-bottom: 40px;
+    font-size: 1rem;
+    padding: 2vh 0;
+}
+
+@media (max-width: 1024px) {
+    #about_container {
+        padding-top: 15vh;
+    }
+    #about_container p:last-of-type {
+        padding-bottom: 13vh;
+    }
+}

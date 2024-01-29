@@ -1,0 +1,9 @@
+.flashlight {
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    top: var(--yPos);
+    left: var(--xPos);
+    position: absolute;
+    background: radial-gradient(rgba(29, 79, 216, 0.227), rgba(15, 23, 42, 0.1) 50%, rgba(15, 23, 42, 0.4) 60%, rgba(15, 23, 42, 0.6) 70%, rgba(15, 23, 42, 0.9) 80%, transparent 90%);
+}

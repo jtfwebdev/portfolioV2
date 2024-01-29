@@ -1,0 +1,21 @@
+#projectsList_container {
+    width: 90%;
+    margin: 0 auto;
+    scroll-margin-top: 5vh;
+}
+
+@media(max-width: 1024px) {
+    #projectsList_container {
+        width: 100%;
+        margin: 0;
+    }
+    #projectsList_container h2 {
+        position: sticky;
+        top: 0;
+        backdrop-filter: blur(2px);
+        color: #CED0CE;
+        font-size: 1rem;
+        margin-bottom: 30px;
+        padding: 2vh 0;
+    }
+}

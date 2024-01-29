@@ -1,0 +1,45 @@
+#socialLinks {
+    margin-top: 60px;
+    display: flex;
+    width: 150px;
+    justify-content: space-between;
+    color: white;
+}
+
+.socialIcon {
+    font-size: 30px;
+    transition-duration: .3s;
+}
+
+.socialIcon:hover {
+    color: #7a9e9f;
+    cursor: pointer;
+    animation: socialIconRumble;
+    animation-duration: .3s;
+}
+
+@keyframes socialIconRumble {
+    0% {
+        rotate: -10deg;
+    }
+
+    20% {
+        rotate: 10deg;
+    }
+
+    40% {
+        rotate: -10deg;
+    }
+
+    60% {
+        rotate: 10deg;
+    }
+
+    80% {
+        rotate: -10deg;
+    }
+
+    100% {
+        rotate: 0;
+    }
+}
