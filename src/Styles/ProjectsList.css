@@ -12,10 +12,17 @@
     #projectsList_container h2 {
         position: sticky;
         top: 0;
+        background-color: rgba(15, 23, 42, 0.4);
         backdrop-filter: blur(2px);
         color: #CED0CE;
         font-size: 1rem;
         margin-bottom: 30px;
         padding: 2vh 0;
+    }
+}
+
+@media (max-width: 595px) {
+    #projectsList_container {
+        margin-bottom: 10vh;
     }
 }

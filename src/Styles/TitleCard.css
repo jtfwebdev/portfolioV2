@@ -21,3 +21,15 @@
     width: fit-content;
     font-family: 'Raleway', sans-serif;
 }
+
+@media (max-width: 400px) {
+    #titleCard h1 {
+        font-size: 3rem;
+    }
+    #titleCard h2 {
+        font-size: 1.8rem;
+    }
+    #titleCard h3 {
+        font-family: 'Raleway', sans-serif;
+    }
+}

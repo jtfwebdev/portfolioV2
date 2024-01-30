@@ -9,8 +9,8 @@ const ProjectPreview = ({headerImage, headerSmall, title, excerpt, devIcons}) =>
 
     return (
         <>
-            {screenWidth <= 1024 && screenWidth > 615 && <MobileProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} />}
-            {(screenWidth > 1024 || screenWidth <= 615) && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} />}
+            {screenWidth <= 1024 && screenWidth > 595 && <MobileProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} />}
+            {(screenWidth > 1024 || screenWidth <= 595) && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} />}
         </>
      );
 }
