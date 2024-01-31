@@ -3,13 +3,9 @@
     border-radius: 30px;
     padding: 10px 0;
     padding-top: 15px;
-}
-
-.projectPreview_container:hover {
-    transition-duration: .3s;
-    background-color: #7a9e9f26;
-    box-shadow: 2px 2px 20px rgba(255, 255, 255, 0.099);
-    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 .projectPreview_container:not(.projectPreview_container:last-of-type) {
@@ -17,25 +13,35 @@
 }
 
 .projectPreview_header {
-    width: 95%;
-    margin: 0 auto;
-    height: 200px;
+    align-self: flex-end;
+    width: 350px;
+    height: 146px;
+    background-size: contain;
     background-position: top center;
     border-radius: 30px;
+    margin-right: 5%;
+}
+
+@media (max-width: 1090px) {
+    .projectPreview_header {
+        width: 320px;
+        height: 133px;
+    }
 }
 
 .projectPreview_textContainer {
     position: relative;
-    width: 90%;
-    margin: 0 auto;
+    width: 350px;
+    align-self: flex-end;
+    margin-right: 5%;
     overflow: hidden;
 }
 
 .projectPreview_container h3 {
     color: #CED0CE;
-    margin: 5px auto;
+    margin: 10px auto;
     text-align: right;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .projectPreview_container p {
@@ -66,8 +72,13 @@
     margin-right: 10px;
 }
 
-.projectPreview_container:hover .devIcon-container i {
-    color: #F15025;
+@media (min-width: 596px) {
+    .projectPreview_container:hover .devIcon-container i {
+        color: #F15025;
+    }
+    .projectPreview_container:hover {
+        cursor: pointer;
+    }
 }
 
 .mob-projectPreview_container {
@@ -119,4 +130,24 @@
         width: 170px;
         height: 106px;
     }
+}
+
+@media (max-width: 595px) {
+    .projectPreview_textContainer {
+        width: 320px;
+        align-self: flex-end;
+        margin: 0;
+        margin-right: 5%;
+    }
+    .projectPreview_container p {
+        position: relative;
+        color: #CED0CE;
+        text-align: right;
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+    .devIcon-container i {
+        color: #F15025;
+    }
+
 }

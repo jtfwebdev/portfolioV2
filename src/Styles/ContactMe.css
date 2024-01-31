@@ -102,8 +102,13 @@
 
 @media (max-width: 768px) {
     .contactForm_container {
-            width: 95%;
-        }
+        width: 95%;
+    }
+    #contactMe_container h3,
+    #contactMe_container p {
+        width: 95% !important;
+        margin: 0 auto;
+    }
 }
 
 /* Animated Button */

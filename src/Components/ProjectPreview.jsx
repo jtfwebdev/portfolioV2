@@ -9,8 +9,9 @@ const ProjectPreview = ({headerImage, headerSmall, title, excerpt, devIcons}) =>
 
     return (
         <>
-            {screenWidth <= 1024 && screenWidth > 595 && <MobileProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} />}
-            {(screenWidth > 1024 || screenWidth <= 595) && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} />}
+            {screenWidth <= 1024 && screenWidth > 595 && <TabletProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} />}
+            {screenWidth > 1024 && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} />}
+            {screenWidth <= 595 && <MobileProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} /> }
         </>
      );
 }
@@ -71,7 +72,7 @@ const FullScreenProjectPreview = ({ headerImage, title, excerpt, devIcons }) => 
     )
 }
 
-const MobileProjectPreview = ({ headerImage, headerSmall, title, excerpt, devIcons }) => {
+const TabletProjectPreview = ({ headerSmall, title, excerpt, devIcons }) => {
     return (
         <div className="mob-projectPreview_container">
             <div
@@ -85,6 +86,29 @@ const MobileProjectPreview = ({ headerImage, headerSmall, title, excerpt, devIco
                     {devIcons.map((icon, index) => {
                         return <i key={index} className={icon}></i>
                     })}
+                </div>
+            </div>
+        </div>
+    )
+}
+
+const MobileProjectPreview = ({ headerImage, title, excerpt, devIcons }) => {
+    return (
+        <div>
+            <div
+                className="projectPreview_container">
+                <div
+                    className="projectPreview_header"
+                    style={{ backgroundImage: `url(${headerImage})` }}
+                ></div>
+                <div className="projectPreview_textContainer">
+                    <p>{excerpt}
+                    </p>
+                    <div className="devIcon-container">
+                        {devIcons.map((icon, index) => {
+                            return <i key={index} className={icon}></i>
+                        })}
+                    </div>
                 </div>
             </div>
         </div>
