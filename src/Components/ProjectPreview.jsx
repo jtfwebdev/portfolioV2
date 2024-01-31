@@ -3,22 +3,22 @@ import { motion } from 'framer-motion'
 import { ScreenWidthContext } from '../App'
 import { useContext } from 'react'
 
-const ProjectPreview = ({headerImage, headerSmall, title, excerpt, devIcons}) => { //When adding new projects, ensure that excerpt does not encroach on dev icons when animating in
+const ProjectPreview = ({headerImage, headerSmall, title, excerpt, devIcons, target}) => { //When adding new projects, ensure that excerpt does not encroach on dev icons when animating in
 
     const screenWidth = useContext(ScreenWidthContext);
 
     return (
         <>
-            {screenWidth <= 1024 && screenWidth > 595 && <TabletProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} />}
-            {screenWidth > 1024 && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} />}
-            {screenWidth <= 595 && <MobileProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} /> }
+            {screenWidth <= 1024 && screenWidth > 595 && <TabletProjectPreview headerImage={headerImage} headerSmall={headerSmall} title={title} excerpt={excerpt} devIcons={devIcons} target={target} />}
+            {screenWidth > 1024 && <FullScreenProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} target={target} />}
+            {screenWidth <= 595 && <MobileProjectPreview headerImage={headerImage} title={title} excerpt={excerpt} devIcons={devIcons} target={target} /> }
         </>
      );
 }
 
 export default ProjectPreview;
 
-const FullScreenProjectPreview = ({ headerImage, title, excerpt, devIcons }) => {
+const FullScreenProjectPreview = ({ headerImage, title, excerpt, devIcons, target }) => {
 
     const projectPreviewH3Vars = {
         initial: {
@@ -43,7 +43,7 @@ const FullScreenProjectPreview = ({ headerImage, title, excerpt, devIcons }) => 
     }
 
     return (
-        <motion.div
+        <motion.a target="_blank" href={target}
             className="projectPreview_container"
             variants={null}
             initial="initial"
@@ -68,13 +68,13 @@ const FullScreenProjectPreview = ({ headerImage, title, excerpt, devIcons }) => 
                     })}
                 </div>
             </div>
-        </motion.div>
+        </motion.a>
     )
 }
 
-const TabletProjectPreview = ({ headerSmall, title, excerpt, devIcons }) => {
+const TabletProjectPreview = ({ headerSmall, title, excerpt, devIcons, target }) => {
     return (
-        <div className="mob-projectPreview_container">
+        <a className="mob-projectPreview_container" target="_blank" href={target}>
             <div
                 className="mob-projectPreview_header"
                 style={{ backgroundImage: `url(${headerSmall})` }}
@@ -88,13 +88,13 @@ const TabletProjectPreview = ({ headerSmall, title, excerpt, devIcons }) => {
                     })}
                 </div>
             </div>
-        </div>
+        </a>
     )
 }
 
-const MobileProjectPreview = ({ headerImage, title, excerpt, devIcons }) => {
+const MobileProjectPreview = ({ headerImage, excerpt, devIcons, target }) => {
     return (
-        <div>
+        <a target="_blank" href={target}>
             <div
                 className="projectPreview_container">
                 <div
@@ -102,8 +102,7 @@ const MobileProjectPreview = ({ headerImage, title, excerpt, devIcons }) => {
                     style={{ backgroundImage: `url(${headerImage})` }}
                 ></div>
                 <div className="projectPreview_textContainer">
-                    <p>{excerpt}
-                    </p>
+                    <p>{excerpt}</p>
                     <div className="devIcon-container">
                         {devIcons.map((icon, index) => {
                             return <i key={index} className={icon}></i>
@@ -111,6 +110,6 @@ const MobileProjectPreview = ({ headerImage, title, excerpt, devIcons }) => {
                     </div>
                 </div>
             </div>
-        </div>
+        </a>
     )
 }

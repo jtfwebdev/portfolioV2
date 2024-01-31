@@ -18,9 +18,9 @@ const ProjectsList = ({projectsRef}) => {
         <>
             <div id="projectsList_container" ref={projectsRef}>
                 {screenWidth <= 1024 && <h2>PROJECTS</h2>}
-                <ProjectPreview headerImage={MovieReviewHeaderImage} headerSmall={MovieReviewSmall} title={ProjectsInfo[0].title} excerpt={ProjectsInfo[0].excerpt} devIcons={ProjectsInfo[0].devIcons} />
-                <ProjectPreview headerImage={ConwaysHeaderImage} headerSmall={ConwaysSmall} title={ProjectsInfo[1].title} excerpt={ProjectsInfo[1].excerpt} devIcons={ProjectsInfo[1].devIcons} />
-                <ProjectPreview headerImage={MainStHeaderImage} headerSmall={MainStSmall} title={ProjectsInfo[2].title} excerpt={ProjectsInfo[2].excerpt} devIcons={ProjectsInfo[2].devIcons} />
+                <ProjectPreview headerImage={MovieReviewHeaderImage} headerSmall={MovieReviewSmall} title={ProjectsInfo[0].title} excerpt={ProjectsInfo[0].excerpt} devIcons={ProjectsInfo[0].devIcons} target={ProjectsInfo[0].target} />
+                <ProjectPreview headerImage={ConwaysHeaderImage} headerSmall={ConwaysSmall} title={ProjectsInfo[1].title} excerpt={ProjectsInfo[1].excerpt} devIcons={ProjectsInfo[1].devIcons} target={ProjectsInfo[1].target} />
+                <ProjectPreview headerImage={MainStHeaderImage} headerSmall={MainStSmall} title={ProjectsInfo[2].title} excerpt={ProjectsInfo[2].excerpt} devIcons={ProjectsInfo[2].devIcons} target={ProjectsInfo[2].target} />
             </div>
             <div className="divider"></div>
         </>

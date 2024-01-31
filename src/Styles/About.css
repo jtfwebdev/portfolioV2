@@ -21,6 +21,7 @@
     margin-bottom: 40px;
     font-size: 1rem;
     padding: 2vh 0;
+    z-index: 99;
 }
 
 @media (max-width: 1024px) {

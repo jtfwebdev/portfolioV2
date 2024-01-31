@@ -90,6 +90,7 @@
         top: 0;
         backdrop-filter: blur(2px);
         padding: 2vh 0;
+        z-index: 99;
     }
     #contactMe_container h3, #contactMe_container p {
         width: 70% !important;

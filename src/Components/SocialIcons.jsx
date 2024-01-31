@@ -7,9 +7,9 @@ import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
 const SocialIcons = () => {
     return ( 
         <div id="socialLinks">
-            <FontAwesomeIcon className="socialIcon" icon={faGithub} />
-            <FontAwesomeIcon className="socialIcon" icon={faLinkedin} />
-            <FontAwesomeIcon className="socialIcon" icon={faEnvelope} />
+            <a target="_blank" href="https://github.com/jtfwebdev"><FontAwesomeIcon className="socialIcon" icon={faGithub} /></a>
+            <a target="_blank" href="https://www.linkedin.com/in/josh-ford-a950452b0/"><FontAwesomeIcon className="socialIcon" icon={faLinkedin} /></a>
+            <a target="_blank" href="mailto:jtfwebdevconsultant@hotmail.com?Subject=Website%20Development%20Query"><FontAwesomeIcon className="socialIcon" icon={faEnvelope} /></a>
         </div>
      );
 }

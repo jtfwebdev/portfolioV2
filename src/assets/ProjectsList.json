@@ -20,7 +20,7 @@
     {
         "target": "https://conwaysapp.co.uk/",
         "title": "Conway's Game of Life",
-        "excerpt": "Single-player cellular propagation game. Utilises second- and third-order loops.",
+        "excerpt": "Single-player cellular propagation game. Utilises canvas manipulation with second- and third-order loops.",
         "text": [
             "Conway's Game of Life is a single-player game that visualises cellular propagation.",
             "This project is coded in Typescript and React, and was initialised using Vite.",

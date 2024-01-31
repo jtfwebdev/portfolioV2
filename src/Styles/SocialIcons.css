@@ -3,7 +3,6 @@
     display: flex;
     width: 150px;
     justify-content: space-between;
-    color: white;
 }
 
 .socialIcon {
@@ -11,11 +10,18 @@
     transition-duration: .3s;
 }
 
-.socialIcon:hover {
-    color: #7a9e9f;
-    cursor: pointer;
-    animation: socialIconRumble;
-    animation-duration: .3s;
+#socialLinks a {
+    text-decoration: none;
+    color: #CED0CE;
+}
+
+@media (min-width: 1025px) {
+    .socialIcon:hover {
+        color: #7a9e9f;
+        cursor: pointer;
+        animation: socialIconRumble;
+        animation-duration: .3s;
+    }
 }
 
 @keyframes socialIconRumble {
