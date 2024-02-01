@@ -49,3 +49,9 @@
         rotate: 0;
     }
 }
+
+@media (max-width: 1024px) {
+    #socialLinks {
+        margin-bottom: 10vh;
+    }
+}

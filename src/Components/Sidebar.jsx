@@ -12,6 +12,7 @@ const Sidebar = ({aboutRef, projectsRef, contactRef}) => {
     return (
         <div id="sidebar">
             <TitleCard />
+            {screenWidth <= 1024 && <ContactMeButton target={contactRef} />}
             <SocialIcons />
             {screenWidth > 1024 && <TitleCardNav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />}
         </div>
@@ -19,3 +20,16 @@ const Sidebar = ({aboutRef, projectsRef, contactRef}) => {
 }
  
 export default Sidebar;
+
+const ContactMeButton = ({target}) => {
+
+    const scrollToForm = () => {
+        target.current.scrollIntoView({behavior: "smooth"});
+    }
+
+    return (
+        <button id="contactMe_button" onClick={scrollToForm}>
+            Contact me
+        </button>
+    )
+}

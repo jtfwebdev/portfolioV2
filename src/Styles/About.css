@@ -26,7 +26,7 @@
 
 @media (max-width: 1024px) {
     #about_container {
-        padding-top: 10vh;
+        padding-top: 0
     }
     #about_container p:last-of-type {
         padding-bottom: 10vh;

@@ -10,10 +10,28 @@
     padding-right: 3vw;
 }
 
+#contactMe_button {
+    width: fit-content;
+    border: none;
+    background-color: #F15025;
+    font-size: 1.5rem;
+    margin-top: 5vh;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition-duration: .3s;
+}
+
+#contactMe_button:hover {
+    cursor: pointer;
+    opacity: .8;
+}
+
 @media (max-width: 1024px) {
     #sidebar {
         position: relative;
         height: auto;
         width: auto;
+        margin-top: 5vh;
     }
 }
