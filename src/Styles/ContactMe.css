@@ -86,9 +86,11 @@
         color: #CED0CE;
         font-size: 1rem;
         margin-bottom: 4vh;
+        position: -webkit-sticky;
         position: sticky;
         top: 0;
-        backdrop-filter: blur(2px);
+        -webkit-backdrop-filter: blur(2px);
+                backdrop-filter: blur(2px);
         padding: 2vh 0;
         z-index: 99;
     }
@@ -148,6 +150,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 

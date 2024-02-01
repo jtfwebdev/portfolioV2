@@ -19,8 +19,36 @@
     .socialIcon:hover {
         color: #7a9e9f;
         cursor: pointer;
-        animation: socialIconRumble;
-        animation-duration: .3s;
+        -webkit-animation: socialIconRumble;
+                animation: socialIconRumble;
+        -webkit-animation-duration: .3s;
+                animation-duration: .3s;
+    }
+}
+
+@-webkit-keyframes socialIconRumble {
+    0% {
+        rotate: -10deg;
+    }
+
+    20% {
+        rotate: 10deg;
+    }
+
+    40% {
+        rotate: -10deg;
+    }
+
+    60% {
+        rotate: 10deg;
+    }
+
+    80% {
+        rotate: -10deg;
+    }
+
+    100% {
+        rotate: 0;
     }
 }
 

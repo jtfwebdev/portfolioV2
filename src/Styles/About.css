@@ -14,10 +14,12 @@
 }
 
 #about_container h2 {
+    position: -webkit-sticky;
     position: sticky;
     top: 0;
     background-color: rgba(15, 23, 42, 0.4);
-    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+            backdrop-filter: blur(4px);
     margin-bottom: 40px;
     font-size: 1rem;
     padding: 2vh 0;

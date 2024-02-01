@@ -5,7 +5,7 @@
     width: 100%;
     height: 46.6562px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     z-index: 999;
     transition-duration: .3s;
     background-color: rgb(15, 23, 42);
@@ -18,7 +18,7 @@
     width: 100%;
     height: 46.6562px;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     z-index: 999;
     transition-duration: .3s;
     transition-delay: .9s;
@@ -54,7 +54,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: start;
+    justify-content: flex-start;
     padding-top: 50px;
 }
 
