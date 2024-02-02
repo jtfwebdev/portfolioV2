@@ -114,6 +114,14 @@
     }
 }
 
+#contactMe_container p a {
+    pointer-events: all;
+}
+
+#contactMe_container p a:hover {
+    cursor: pointer;
+}
+
 /* Animated Button */
 
 #animated_button {
