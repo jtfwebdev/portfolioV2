@@ -12,7 +12,7 @@ const ContactMe = ({contactRef}) => {
         <div id="contactMe_container" ref={contactRef}>
             {screenWidth <= 1024 && <h2>CONTACT</h2>}
             <h3>Want to discuss a project with me?</h3>
-            <p>You can contact me on <a>Github</a>, <a>LinkedIn</a>, or <a>Email</a> - or send me a message here.</p>
+            <p>You can contact me on <a target="_blank" href="https://github.com/jtfwebdev">Github</a>, <a target="_blank" href="https://www.linkedin.com/in/josh-ford-a950452b0/">LinkedIn</a>, or <a target="_blank" href="mailto:jtfwebdevconsultant@hotmail.com?Subject=Website%20Development%20Query">Email</a> - or send me a message here.</p>
             <ContactForm />
         </div>
      );
