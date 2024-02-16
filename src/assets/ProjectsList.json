@@ -1,5 +1,18 @@
 [
     {
+        "target": "https://blog.jtfwebdev.co.uk",
+        "title": "Web Development Blog",
+        "excerpt": "Headless CMS (React and Wordpress) - personal blog covering my Web Development journey.",
+        "text": [],
+        "devIcons": [
+            "devicon-react-original-wordmark",
+            "devicon-wordpress-plain-wordmark",
+            "devicon-tailwindcss-plain-wordmark",
+            "devicon-typescript-plain",
+            "devicon-framermotion-original-wordmark"
+        ]
+    },
+    {
         "target": "https://moviereviewblogger.co.uk/",
         "title": "Movie Review Blogger",
         "excerpt": "My personal take on the obligatory movie API project. Fullstack MERN project with authentication.",
