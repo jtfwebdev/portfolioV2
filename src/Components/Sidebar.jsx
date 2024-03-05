@@ -5,7 +5,7 @@ import '../Styles/Sidebar.css'
 import SocialIcons from "./SocialIcons"
 import { ScreenWidthContext } from '../App'
 
-const Sidebar = ({aboutRef, projectsRef, contactRef}) => {
+const Sidebar = ({aboutRef, blogRef, projectsRef, contactRef}) => {
 
     const screenWidth = useContext(ScreenWidthContext);
 
@@ -14,7 +14,7 @@ const Sidebar = ({aboutRef, projectsRef, contactRef}) => {
             <TitleCard />
             {screenWidth <= 1024 && <ContactMeButton target={contactRef} />}
             <SocialIcons />
-            {screenWidth > 1024 && <TitleCardNav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />}
+            {screenWidth > 1024 && <TitleCardNav aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />}
         </div>
      );
 }

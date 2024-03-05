@@ -6,14 +6,18 @@ import Sidebar from './Components/Sidebar'
 import FlashlightEffect from './Components/FlashlightEffect';
 import MobileNav from './Components/MobileNav';
 import StairTransition from './Components/StairTransition';
+import UseFetchBlogs from './Hooks/UseFetchBlogs'
 
 export const ScreenWidthContext = createContext(window.innerWidth);
 
 function App() {
 
   const [screenWidth, setScreenWidth] = useState(window.innerWidth);
+  const [blogs, setBlogs] = useState(null);
 
   useEffect(() => {
+
+    UseFetchBlogs(setBlogs);
 
     const monitorWidth = () => {
       setScreenWidth(window.innerWidth)
@@ -30,6 +34,7 @@ function App() {
   }, []);
 
   const aboutRef = useRef();
+  const blogRef = useRef();
   const projectsRef = useRef();
   const contactRef = useRef();
 
@@ -48,10 +53,10 @@ function App() {
     <div className="container">
     <ScreenWidthContext.Provider value={screenWidth}>
       {screenWidth > 1024 && <FlashlightEffect />}
-        {screenWidth <= 1024 && <MobileNav aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} handleAnimateStairs={handleAnimateStairs} />}
+        {screenWidth <= 1024 && <MobileNav aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} handleAnimateStairs={handleAnimateStairs} />}
       {screenWidth <= 1024 && <StairTransition stairsScope={stairsScope} />}
-      <Sidebar aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
-      <Content aboutRef={aboutRef} projectsRef={projectsRef} contactRef={contactRef} />
+      <Sidebar aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />
+      <Content aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />
     </ScreenWidthContext.Provider>
     </div>
   )

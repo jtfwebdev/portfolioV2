@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import '../Styles/TitleCardNav.css'
 import { motion } from 'framer-motion'
 
-const TitleCardNav = ({aboutRef, projectsRef, contactRef}) => {
+const TitleCardNav = ({aboutRef, blogRef, projectsRef, contactRef}) => {
 
     const [activeNavLink, setActiveNavLink] = useState("about");
 
@@ -11,14 +11,17 @@ const TitleCardNav = ({aboutRef, projectsRef, contactRef}) => {
         setActiveNavLink(activeLink);
     }
 
-    const [aboutInView, setAboutInView] = useState();
-    const [projectsInView, setProjectsInView] = useState();
-    const [contactInView, setContactInView] = useState();
-
     useEffect(() => {
         
         const aboutObserver = new IntersectionObserver(([entry]) => {
             if(entry.isIntersecting) setActiveNavLink("about");
+        },
+        {
+            threshold: .5
+        })
+
+        const blogObserver = new IntersectionObserver(([entry]) => {
+            if(entry.isIntersecting) setActiveNavLink("blog");
         },
         {
             threshold: .5
@@ -38,11 +41,13 @@ const TitleCardNav = ({aboutRef, projectsRef, contactRef}) => {
         })
 
         aboutObserver.observe(aboutRef.current);
+        blogObserver.observe(blogRef.current);
         projectsObserver.observe(projectsRef.current);
         contactObserver.observe(contactRef.current);
 
         return () => {
             aboutObserver.disconnect();
+            blogObserver.disconnect();
             projectsObserver.disconnect();
             contactObserver.disconnect();
         }
@@ -55,6 +60,13 @@ const TitleCardNav = ({aboutRef, projectsRef, contactRef}) => {
                 <motion.a
                     onClick={() => handleNavClick(aboutRef, "about")}>
                     ABOUT
+                </motion.a>
+                <div></div>
+            </div>
+            <div className={activeNavLink == "blog" ? "navLink active" : "navLink"}>
+                <motion.a
+                    onClick={() => handleNavClick(blogRef, "blog")}>
+                    BLOG
                 </motion.a>
                 <div></div>
             </div>
