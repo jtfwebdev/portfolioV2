@@ -1,5 +1,18 @@
 [
     {
+        "target": "https://jessdrawsandstitches.co.uk",
+        "title": "Jess Draws & Stitches",
+        "excerpt": "Headless CMS (React and Wordpress) - personal portfolio for artist client.",
+        "text": [],
+        "devIcons": [
+            "devicon-react-original-wordmark",
+            "devicon-wordpress-plain-wordmark",
+            "devicon-tailwindcss-plain-wordmark",
+            "devicon-typescript-plain",
+            "devicon-framermotion-original-wordmark"
+        ]
+    },
+    {
         "target": "https://blog.jtfwebdev.co.uk",
         "title": "Web Development Blog",
         "excerpt": "Headless CMS (React and Wordpress) - personal blog covering my Web Development journey.",

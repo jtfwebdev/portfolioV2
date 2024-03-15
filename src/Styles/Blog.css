@@ -1,5 +1,33 @@
 #blog_container {
-    height: 200px;
     width: 100%;
-    background-color: pink;
+}
+
+.blog_single {
+    text-align: end;
+    margin-bottom: 30px;
+}
+
+.blog_single h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    padding-right: 2em;
+}
+
+.blog_title_cont {
+    position: relative;
+}
+
+.blog_open {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.blog_single p {
+    font-size: 1rem;
+    font-family: 'Raleway', sans-serif;
+}
+
+#blog_container a {
+    color: #CED0CE;
 }

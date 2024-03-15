@@ -56,7 +56,7 @@ function App() {
         {screenWidth <= 1024 && <MobileNav aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} handleAnimateStairs={handleAnimateStairs} />}
       {screenWidth <= 1024 && <StairTransition stairsScope={stairsScope} />}
       <Sidebar aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />
-      <Content aboutRef={aboutRef} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />
+      <Content aboutRef={aboutRef} blogs={blogs} blogRef={blogRef} projectsRef={projectsRef} contactRef={contactRef} />
     </ScreenWidthContext.Provider>
     </div>
   )

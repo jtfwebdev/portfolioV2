@@ -9,7 +9,7 @@
 }
 
 .projectPreview_container:not(.projectPreview_container:last-of-type) {
-    margin-bottom: 10vh;
+    margin-bottom: 6vh;
 }
 
 .projectPreview_header {
