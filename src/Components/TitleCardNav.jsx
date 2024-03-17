@@ -29,8 +29,9 @@ const TitleCardNav = ({aboutRef, blogRef, projectsRef, contactRef}) => {
 
         const projectsObserver = new IntersectionObserver(([entry]) => {
             if (entry.isIntersecting) setActiveNavLink("projects");
-        }, {
-            threshold: .5
+        }, 
+        {
+            threshold: .1
         })
 
         const contactObserver = new IntersectionObserver(([entry]) => {

@@ -11,7 +11,7 @@ const About = ({aboutRef}) => {
         <div id="about_container" ref={aboutRef}>
             {screenWidth <= 1024 && <h2>ABOUT</h2>}
             {Bio[0].text.map((paragraph, idx) => {
-                return <p>{paragraph}</p>
+                return <p key={idx}>{paragraph}</p>
             })}
             <div className="divider"></div>
         </div>

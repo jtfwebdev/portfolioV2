@@ -152,3 +152,9 @@
     }
 
 }
+
+@media(max-width: 390px) {
+    .projectPreview_header, .projectPreview_textContainer {
+        width: 250px;
+    }
+}
